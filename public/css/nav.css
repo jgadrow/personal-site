@@ -1,0 +1,172 @@
+/**
+ * Cross-Device Nav Section.
+ */
+nav a {
+    color: inherit;
+}
+
+nav a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li ul {
+    background-color: #cf291d;
+    color: #000;
+    display: none;
+}
+
+nav li:hover > ul > li:hover {
+    background-color: #b50717;
+}
+
+nav > ul {
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+}
+
+nav > ul > li:hover, nav > ul > li:active {
+    background-color: #484848;
+}
+
+.show-menu {
+    text-decoration: none;
+    display: none;
+}
+
+#show-menu {
+    display: none;
+}
+
+#show-menu:checked + ul {
+    display: block;
+}
+
+/**
+ * Desktop Nav Section.
+ */
+nav {
+    text-align: center;
+}
+
+nav li:hover > ul {
+    border-radius: 10px;
+    display: block;
+    margin-left: -3px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+nav li:hover > ul > li {
+    border-radius: inherit;
+    display: inline-block;
+    padding: 2px;
+}
+
+nav > ul {
+    border-radius: 10px;
+}
+
+nav > ul, nav > ul > li {
+    display: inline-block;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+nav > ul > li:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+nav > ul > li:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+nav > ul > li + li {
+    border-left: 1px solid #000;
+    padding-left: 3px;
+    margin-left: -5px;
+}
+
+/**
+ * Mobile Nav Section.
+ */
+@media screen and (max-width: 760px) {
+    nav {
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        width: 100%;
+    }
+    
+    nav label {
+        margin-bottom: 0;
+    }
+    
+    nav li ul {
+        display: block;
+        padding-left: 0;
+    }
+    
+    nav li ul a {
+        padding-left: 10px;
+    }
+    
+    nav li:hover > ul {
+        border-radius: 0;
+        display: block;
+        margin-left: 0;
+        position: static;
+        text-align: left;
+        z-index: 0;
+    }
+
+    nav li:hover > ul > li {
+        border-radius: 0;
+        display: block;
+        padding: 0;
+    }
+
+    nav > ul {
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    nav > ul, nav > ul > li {
+        display: block;
+    }
+
+    nav > ul > li {
+        border-radius: 0 !important;
+        display: block;
+        padding: 0;
+    }
+    
+    nav > ul > li + li {
+        border-left: 0;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    
+    /**
+     * At the end so that it renders shut at start.
+     */
+    nav > ul {
+        display: none;
+    }
+
+    .show-menu {
+        display: block;
+    }
+}
+
